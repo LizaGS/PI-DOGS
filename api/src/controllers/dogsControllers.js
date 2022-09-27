@@ -1,10 +1,12 @@
+require('dotenv').config(); // para variables de entorno como .env
 const axios = require('axios');
+const API_KEY = process.env.API_KEY;
 const { Dog, Temperament } = require('../db');
 
 //------------------------API DOGS------------------------
 const getApiDogs = async () => {
     try {
-        let apiD = (await axios('https://api.thedogapi.com/v1/breeds')).data.map(d => {
+        let apiD = (await axios(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)).data.map(d => {
             return {
                 id: d.id,
                 image: d.image.url,
@@ -15,6 +17,7 @@ const getApiDogs = async () => {
                 life_span: d.life_span,
             }
         })
+        //console.log(apiD);
         return apiD;  
     } catch (error) {
         console.log(error)   
@@ -24,7 +27,7 @@ const getApiDogs = async () => {
 //------------------------DB DOGS------------------------
 const getDbDogs = async () => {
     try {
-        let dbD = await Dog.findAll({
+        return await Dog.findAll({
             include: {
                 model: Temperament,
                 attributes: ['name'],
@@ -33,7 +36,6 @@ const getDbDogs = async () => {
                 }
             }
         });
-        return dbD;
     } catch (error) {
         console.log(error) 
     }
@@ -42,9 +44,21 @@ const getDbDogs = async () => {
 //------------------------API + DB DOGS------------------------
 const getAllDogs = async () => {
     try {
-        const apiDogs = await getApiDogs();
-        const dbDogs = await getDbDogs();
-        const getAllDogs = apiDogs.concat(dbDogs);
+        let apiDogs = await getApiDogs();
+        let dbDogs = await getDbDogs();
+        dbDogs = dbDogs.map(d => {
+            return {
+                id: d.id,
+                image: d.image,
+                name: d.name,
+                temperament: d.temperaments.map(e => e.name).join(', '),
+                weight: d.weight,
+                height: d.height,
+                life_span: d.life_span,
+            }
+        })
+        //console.log(dbDogs);
+        const getAllDogs = [...dbDogs, ...apiDogs];
         return getAllDogs;
     } catch (error) {
         console.log(error)

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url(images/fondo.jpg);
+    background-size: cover;
+    background-size: 25rem;
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    height: 567px;
+}
+
+.cont {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(246, 218, 184);
+    border: 2px solid maroon;
+    border-radius: 10px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 15px;
+    height: 540px;
+}
+
+.cont a {
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+    color: black;
+}
+
+.name {
+    font-family: 'Combo', cursive;
+    font-size: 35px;
+    color: chocolate;
+    text-align: center;
+    height: 60px;
+}
+
+.image {
+    width: 480px;
+    height: 350px;
+}
+
+.info {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, 370%);
+    width: 950px;
+    margin: 10px;
+    
+}
+
+.temps {
+    border-right: 2px solid rgb(255, 126, 28);
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+}
+
+.temps h4 {
+    font-size: 16px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.temps p {
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.weight {
+    float: left;
+    border-right: 2px solid rgb(255, 126, 28);
+    width: 180px;
+    text-align: center;
+    height: 48px;
+}
+
+.weight h4 {
+    font-size: 16px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.weight p {
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.height {
+    float: left;
+    border-right: 2px solid rgb(255, 126, 28);
+    width: 180px;
+    text-align: center;
+    height: 48px;
+}
+
+.height h4 {
+    font-size: 16px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.height p {
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.life {
+    float: left;
+    width: 180px;
+    text-align: center;
+    height: 48px;
+}
+
+.life h4 {
+    font-size: 16px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.life p {
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+}

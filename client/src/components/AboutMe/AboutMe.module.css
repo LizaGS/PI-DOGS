@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container {
+    position: relative;
+    background-color: rgb(255, 228, 194);
+    background-size: cover;
+    height: 567px; 
+}
+
+.title {
+    font-family: 'Combo', cursive;
+    font-size: 35px;
+    color: maroon;
+    text-align: center;
+    border-top: 20px solid rgb(255, 228, 194);
+    border-bottom: 8px double rgb(255, 126, 28);
+}
+
+.pre {
+    position: absolute;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 50%); 
+    text-align: justify;
+}
+
+.pre h3 {
+    font-family: 'Fredoka One', cursive;
+}
+
+.skills {
+    position: absolute;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-61%, 50%); 
+}
+
+.skills h3 {
+    text-align: justify; 
+    transform: translate(-50%, 50%); 
+    font-family: 'Fredoka One', cursive;
+}
+
+.front {
+    text-align: center;
+    height: 55px;
+    width: 300px;
+    float: left;
+    transform: translate(-50%, 50%);
+}
+
+.front h4 {
+    font-family: 'Fredoka One', cursive;
+}
+
+.front ul {
+    list-style: none;
+}
+
+.back {
+    text-align: center;
+    height: 55px;
+    width: 300px;
+    float: left; 
+    transform: translate(50%, -50%);
+}
+
+.back h4 {
+    font-family: 'Fredoka One', cursive;
+}
+
+.back ul {
+    list-style: none;
+}
+
+.links {
+    position: absolute;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 100%); 
+}
+
+.git {
+    border-right: 2px solid rgb(255, 126, 28);
+    text-align: center;
+    height: 55px;
+    width: 300px;
+    float: left;
+}
+
+.linked {
+    text-align: center;
+    height: 55px;
+    width: 300px;
+    float: left;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}

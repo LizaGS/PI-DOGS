@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.CONTAINER {
+    background-image: url(elements/perros.jpg);
+    background-size: cover;
+    background-size: 25rem;
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    height: 567px;
+}
+
+.container {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(246, 218, 184);
+    border: 2px solid maroon;
+    border-radius: 10px;
+    max-width: 850px;
+    width: 100%;
+    padding: 15px;
+    height: 540px;
+
+}
+
+.container h2 {
+    font-family: 'Combo', cursive;
+    font-size: 26px;
+    color: maroon;
+}
+
+.cont1 {
+    position: absolute;
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.name {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(-50%, 50%);
+}
+
+.name label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.name input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.image {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(50%, -50%);
+}
+
+.image label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.image input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.cont2 {
+    position: absolute;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.minheight {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(-50%, 50%);
+}
+
+.minheight label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.minheight input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.maxheight {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(50%, -50%);
+}
+
+.maxheight label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.maxheight input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.cont3 {
+    position: absolute;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.minweight {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(-50%, 50%);
+}
+
+.minweight label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.minweight input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.maxweight {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(50%, -50%);
+}
+
+.maxweight label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.maxweight input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.cont4 {
+    position: absolute;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.minlife {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(-50%, 50%);
+}
+
+.minlife label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.minlife input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.maxlife {
+    text-align: center;
+    height: 48px;
+    width: 400px;
+    float: left;
+    transform: translate(50%, -50%);
+}
+
+.maxlife label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+}
+
+.maxlife input {
+    width: 80%;
+    border: 2px solid white;
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.cont5 {
+    position: absolute;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.cont5 label {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    border: 10px solid rgb(246, 218, 184);
+
+}
+
+.cont5 select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background-color: rgb(191, 124, 73);
+    ;
+    border-color: rgb(191, 124, 73);
+    font-size: 13px;
+    color: rgb(253, 235, 228);
+    text-align: center;
+    width: 200px;
+    height: 28px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.cont6 {
+    position: absolute;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 80%;
+}
+
+.select {
+    font-family: 'Fredoka One', cursive;
+    font-size: 14px;
+    color: maroon;
+    margin: 0;
+    padding: 0;
+    border: 2px solid rgb(246, 218, 184);
+}
+
+.cont7 {
+    text-align: center;
+    height: 30px;
+    width: 80px;
+    float: left; 
+    transform: translate(10%, -20%);
+    align-items: center;
+    display: flex;
+    font-family: 'Manrope', sans-serif;
+}
+
+.cont7 h6 {  
+    width: 90px;
+    height: 15px;
+}
+
+.but  {
+    width: 15px;
+    height: 15px;
+    border: 1px solid chocolate;
+    background: chocolate;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.button {
+    width: 90px;
+    height: 36px;
+    border: 1px solid rgb(255, 126, 28);
+    background: rgb(255, 126, 28);
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Fredoka One', cursive;
+    margin-top: 410px;
+    cursor: pointer;
+}
+
+.errors {
+    color: orangered;
+}
