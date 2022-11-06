@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { getBreed } from "../../actions";
 import styled from './SearchBar.module.css';
 
-export default function SearchBar() {
+export default function SearchBar({setCurrentPage}) {
 
     const dispatch = useDispatch();
     const [dog, setDog] = useState('');
@@ -15,10 +15,11 @@ export default function SearchBar() {
 
     function handleClick(e) {
         e.preventDefault();
+        e.target.value = "";
         dispatch(getBreed(dog));
         setDog('');
+        setCurrentPage(1);
     };
-
 
     return (
         <div className={styled.wrap}>

@@ -4,14 +4,16 @@ import { useParams } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import { breedDetail } from "../../actions";
 import errorphoto from "./images/errorphoto.jpg"
-import opps from "./images/opps.png"
+//import opps from "./images/opps.png"
 import styled from './DogDetail.module.css';
+import Loading from "../Loading/Loading";
 
 export default function DogDetail() {
 
     const dispatch = useDispatch();
     const breedDetails = useSelector((state) => state.breedDetail[0]);
-    //console.log(breedDetails)
+
+    console.log(breedDetails)
     const { id } = useParams();
 
     useEffect(() => {
@@ -48,15 +50,9 @@ export default function DogDetail() {
                         </div>
                     </div>
                     :
-                    <div className={styled.cont}>
-                        <h2 className={styled.name}>Breed Not Found</h2>
-                        <img className={styled.image} src={opps} alt="Not found" /><br /><br />
-                        <a href="/home">Return Home</a>
-                    </div>
+                    <Loading />
                 }
             </div>
-
-
-        </React.Fragment>
+        </React.Fragment >
     );
 };

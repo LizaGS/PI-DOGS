@@ -12,7 +12,7 @@ export default function DogCard({ image, name, weight, temperament }) {
                     <h2>{name}</h2>
                     <div className={styles.cont}>
                         <p className={styles.p}>Weight:</p><p className={styles.p1}>{weight} kg.</p>
-                        <p className={styles.p}>Temperaments:</p><p className={styles.p1}>{temperament}</p>
+                        <p className={styles.p}>Temperaments:</p><p className={styles.p1}>{temperament}</p>    
                     </div>
                     </div>
                 </div>

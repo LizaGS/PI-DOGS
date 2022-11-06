@@ -114,3 +114,21 @@ export const getArranged = (payload) => {
         type: GET_ARRANGED, payload
     };
 };
+
+//LOADING
+export const setLoading = (payload) => {
+    return {
+        type: "LOADING", payload
+    };
+};
+
+//CLEAR DETAIL
+export const setClearDetail = () => {
+    return {
+        type: "CLEAR_DETAIL"
+    };
+};
+
+
+
+

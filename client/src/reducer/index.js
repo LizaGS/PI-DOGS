@@ -5,6 +5,8 @@ const initialStates = {
     breedDetail: [],
     temperament: [],
     allDogs: [],
+    loading: false,
+    details: []
 };
 
 function rootReducer(state = initialStates, action) {
@@ -34,17 +36,17 @@ function rootReducer(state = initialStates, action) {
             let allDogs = state.allDogs;
             /* allDogs = [...new Set(allDogs)].sort(); */
             const dogsFilter = [];
-                allDogs.forEach((e) => {
-                    /* if (e.id.lenght > 10) {
-                        e.temperament.map((t) => (
-                            t.name === action.payload ? dogsFilter.push(e) : null
-                        ))
-                    } else { */
-                    if (e.temperament?.includes(action.payload)) {
-                        dogsFilter.push(e);
-                    }
-                    /* } */
-                })
+            allDogs.forEach((e) => {
+                /* if (e.id.lenght > 10) {
+                    e.temperament.map((t) => (
+                        t.name === action.payload ? dogsFilter.push(e) : null
+                    ))
+                } else { */
+                if (e.temperament?.includes(action.payload)) {
+                    dogsFilter.push(e);
+                }
+                /* } */
+            })
             return {
                 ...state,
                 dogs: dogsFilter
@@ -87,6 +89,17 @@ function rootReducer(state = initialStates, action) {
             return {
                 ...state
             }
+        case "LOADING":
+            return {
+                ...state,
+                loading: action.payload
+            }
+        case "CLEAR_DETAIL":
+            return {
+                ...state,
+                details: action.payload
+            }
+
         default:
             return state;
     }

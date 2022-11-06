@@ -12,7 +12,7 @@ const getDogs = async (req, res) => {
             image: d.image,
             name: d.name,
             temperament: d.temperament,
-            weight: d.weight
+            weight: d.weight            
         }
     });
 
@@ -39,8 +39,8 @@ const getDogId = async (req, res) => {
             const idDog = dogs.filter(e => e.id == id);
             /* console.log(idDog) */
             idDog.length ?
-            res.status(200).send(idDog):
-            res.status(400).send('Dog not found'); 
+                res.status(200).send(idDog) :
+                res.status(400).send('Dog not found');
 
             /* if (idDog.id.length > 20) {
                 const dbDog = idDog.map(d => {
@@ -157,6 +157,7 @@ const newDog = async (req, res) => {
         console.log(error)
     }
 };
+    
 
 
 module.exports = {
