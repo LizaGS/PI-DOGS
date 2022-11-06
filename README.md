@@ -5,7 +5,7 @@
 
 My objective was to build a Single Page Application(SPA) from scratch given a certain initial boiler plate. I had to connect sequelize to a PostgreSQL database. In my case I had a many to many relationship between the models in the database so I had to make models and then connect them via sequelize to PostgreSQL.
 
-For the project I used  [the dog api](https://thedogapi.com/) like api.
+For the project I used  [the dog api](https://thedogapi.com/).
 
 The technologies I've used for this project were...
 - React
