@@ -20,10 +20,12 @@
 const server = require('./src/app.js');
 const { addTemperaments } = require('./src/controllers/temperamentsController.js');
 const { conn } = require('./src/db.js');
+require("dotenv").config();
+const { PORT } = require('./src/config');
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(3001, async() => {
+  server.listen(PORT, async () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
     await addTemperaments();
   });
