@@ -8,11 +8,12 @@ export const GET_CREATED = 'GET_CREATED';
 export const GET_ORDERED = 'GET_ORDERED';
 export const GET_ARRANGED = 'GET_ARRANGED';
 export const POST_DOG = 'POST_DOG';
+const {REACT_APP_API} = process.env // REACT_APP_ LOQUE SEA PERO SIEMPRE TIENE QUE SER REACT_APP_
 
 //----------------Función - acción que me trae todos los perros----------------
 export const getDogs = () => {
     return function (dispatch) {
-        return fetch('http://localhost:3001/dogs')
+        return fetch(`${REACT_APP_API}/dogs`)
             .then(data => data.json())
             .then(res => {
                 return dispatch({
@@ -36,7 +37,7 @@ export const getDogs = () => {
 //----------------Función - acción que me trae la raza que quiero----------------
 export const getBreed = (name) => {
     return async function (dispatch) {
-        let breed = await axios(`http://localhost:3001/dogs?name=${name}`)
+        let breed = await axios(`${REACT_APP_API}/dogs?name=${name}`)
         return dispatch({
             type: GET_BREED,
             payload: breed.data
@@ -47,7 +48,7 @@ export const getBreed = (name) => {
 //----------------Función - acción trae detalle de la raza(id)----------------
 export const breedDetail = (id) => {
     return async function (dispatch) {
-        let detail = await axios(`http://localhost:3001/dogs/${id}`)
+        let detail = await axios(`${REACT_APP_API}/dogs/${id}`)
         return dispatch({
             type: BREED_DETAIL,
             payload: detail.data
@@ -58,7 +59,7 @@ export const breedDetail = (id) => {
 //----------------Función - acción trae los temperamentos----------------
 export const getTemperaments = () => {
     return async function (dispatch) {
-        const temperaments = await axios('http://localhost:3001/temperaments');
+        const temperaments = await axios(`${REACT_APP_API}/temperaments`);
         return dispatch({
             type: GET_TEMPERAMENTS,
             payload: temperaments.data
@@ -77,7 +78,7 @@ export const postDog = (payload) => {
             life_span: payload.min_life_span + ' - ' + payload.max_life_span + ' years',
             temperament: payload.temperament,
         }
-        const post = await axios.post('http://localhost:3001/dogs', newDog)
+        const post = await axios.post(`${REACT_APP_API}/dogs`, newDog)
         return dispatch({
             type: POST_DOG,
             payload: post.data
